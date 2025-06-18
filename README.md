@@ -21,3 +21,14 @@ pip3 install -r requirements.txt
 ```shell
 deactivate
 ```
+
+# Models
+
+1. LLM's
+2. Chat Models
+
+> Open source: Meta's LLaMA, Mistral etc...
+
+> Close source: OpenAI's GPT, Google's Gemini, Anthropic's Claude etc...
+
+
