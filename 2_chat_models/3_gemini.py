@@ -5,6 +5,6 @@ load_dotenv()
 
 model = ChatGoogleGenerativeAI(model="gemini-1.5-pro")
 
-result = model.invoke("What is a capital of United States of America?")
+result = model.invoke("What is a capital of India?")
 
 print(result.content)
