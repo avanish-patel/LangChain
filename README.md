@@ -37,7 +37,14 @@ deactivate
 3. Embedding Models
 > Use to convert text into embedding vectors
 
+# Prompts
 
+> Prompts are the input instructions or queries given to a model to guide its output.
+
+1. Static
+> A static prompt is a fixed instruction given to a language model that doesn't change during interaction.
+2. Dynamic
+> A dynamic prompt is a template with variables that can be filled in with different values, allowing the prompt to change based on the situation, user input, or program logic.
 
 
 # Projects

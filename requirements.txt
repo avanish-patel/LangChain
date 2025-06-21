@@ -25,8 +25,11 @@ python-dotenv
 numpy
 scikit-learn
 
-# required to run `TinyLlama/TinyLlama-1.1B-Chat-v1.0` HF locally
+# Require to run `TinyLlama/TinyLlama-1.1B-Chat-v1.0` HF locally
 torchvision
 
-# require to run `sentence-transformers/all-MiniLM-L6-v2` HF locally
+# Require to run `sentence-transformers/all-MiniLM-L6-v2` HF locally
 sentence-transformers
+
+# For building UI
+streamlit
