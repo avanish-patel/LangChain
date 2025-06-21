@@ -24,3 +24,6 @@ python-dotenv
 # Machine Learning
 numpy
 scikit-learn
+
+# required to run HF locally
+torchvision
