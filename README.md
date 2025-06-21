@@ -25,10 +25,23 @@ deactivate
 # Models
 
 1. LLM's
+> Focus on Text Generation
+
 2. Chat Models
+> Interactive Conversational Focus
 
 > Open source: Meta's LLaMA, Mistral etc...
-
+> 
 > Close source: OpenAI's GPT, Google's Gemini, Anthropic's Claude etc...
 
+3. Embedding Models
+> Use to convert text into embedding vectors
+
+
+
+
+# Projects
+
+1. Document similarity search
+> Have N numbers of documents, Have a query sentence and find documents that matches the highest similarity score with the query 
 
