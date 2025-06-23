@@ -21,7 +21,7 @@ llm = HuggingFaceEndpoint(
 
 model = ChatHuggingFace(llm=llm)
 
-st.header("Research Tool")
+st.header("Research Tool using Static Prompt")
 user_input = st.text_input("Enter your prompt!")
 
 if st.button("Summarize"):

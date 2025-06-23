@@ -47,6 +47,12 @@ deactivate
 > A dynamic prompt is a template with variables that can be filled in with different values, allowing the prompt to change based on the situation, user input, or program logic.
 
 
+A `PromptTemplate` in Langchain is a structured way to create prompts dynamically by inserting variable into a predefined template.
+
+PromptTemplate allows you to define placeholder that can be filled in at runtime with different inputs.
+
+This makes it reusable, flexible, and easy to manage especially when working with dynamic user inputs or automated workflows.
+
 # Projects
 
 1. Document similarity search
