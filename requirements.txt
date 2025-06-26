@@ -1,16 +1,16 @@
 # Langchain Core
-langchain
-langchain-core
+langchain~=0.3.26
+langchain-core~=0.3.66
 
 # OpenAI
-langchain-openai
+langchain-openai~=0.3.24
 openai
 
 # Anthropic
-langchain-anthropic
+langchain-anthropic~=0.3.15
 
 # Google
-langchain-google-genai
+langchain-google-genai~=2.0.10
 google-generativeai
 
 # HF
@@ -19,11 +19,11 @@ transformers
 huggingface-hub
 
 # Environment
-python-dotenv
+python-dotenv~=1.1.0
 
 # Machine Learning
-numpy
-scikit-learn
+numpy~=2.3.0
+scikit-learn~=1.7.0
 
 # Require to run `TinyLlama/TinyLlama-1.1B-Chat-v1.0` HF locally
 torchvision
@@ -32,4 +32,7 @@ torchvision
 sentence-transformers
 
 # For building UI
-streamlit
+streamlit~=1.46.0
+
+# For types and structured output
+pydantic~=2.11.7

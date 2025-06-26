@@ -67,8 +67,14 @@ For many applications, such as chatbots, models need to respond to users directl
 
 ## Ways to get structured output
 
-1. LLM's that can generate Structured Output on it's own using with_structured_output function
+1. LLM's that can generate Structured Output on it's own using `with_structured_output` function
 2. LLM's that can't generate Structured Output on it's own using output parsers
+
+### Using `with_structured_output`
+
+1. TypedDict
+2. Pydantic
+3. JSON Schema
 
 # Projects
 
