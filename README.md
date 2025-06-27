@@ -65,16 +65,23 @@ LangChain provides a unified message format that can be used across chat models,
 
 For many applications, such as chatbots, models need to respond to users directly in natural language. However, there are scenarios where we need models to output in a structured format. For example, we might want to store the model output in a database and ensure that the output conforms to the database schema. This need motivates the concept of structured output, where models can be instructed to respond with a particular output structure.
 
-## Ways to get structured output
+#### Ways to get structured output
 
-1. LLM's that can generate Structured Output on it's own using `with_structured_output` function
-2. LLM's that can't generate Structured Output on it's own using output parsers
+1. LLM's that can generate Structured Output on its own : use `with_structured_output` function
+2. LLM's that can't generate Structured Output on its own: use output parsers
 
-### Using `with_structured_output`
+## Using `with_structured_output`
+
+For LLM's that supports structured output
 
 1. TypedDict
 2. Pydantic
 3. JSON Schema
+
+## Using output parsers
+
+Output parsers in LangChain help converts raw LLM responses into structured formats like JSON, CSV, Pydantic and more.
+They ensure consistency, validation and ease of use in applications.
 
 # Projects
 
