@@ -36,3 +36,8 @@ streamlit~=1.46.0
 
 # For types and structured output
 pydantic~=2.11.7
+
+# For text splitting
+langchain-text-splitters~=0.3.8
+langchain-community~=0.3.26
+langchain-experimental~=0.3.4

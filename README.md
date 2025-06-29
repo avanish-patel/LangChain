@@ -83,6 +83,49 @@ For LLM's that supports structured output
 Output parsers in LangChain help converts raw LLM responses into structured formats like JSON, CSV, Pydantic and more.
 They ensure consistency, validation and ease of use in applications.
 
+# Chains
+
+Chain is a basic building block that combines a prompt template with a language model. 
+It takes input variables, formats them using the prompt template, and then passes the formatted text to the language model for processing.
+
+- Sequencing
+- Parallel
+- Conditional
+
+# Runnable
+
+1. Task Specific Runnable
+
+There are the core LangChain components that have been converted into Runnable so they can be used in pipeline.
+
+Perform task specific operations like LLM calls, prompting, retrieval etc.
+
+- `ChatOpenAI` -> runs an LLM Model
+- `PromptTemplate` -> Formats prompts dynamically
+- `Retriever` -> Retrieves relevant documents
+
+2. Runnable Primitives
+
+There are fundamental building blocks for structuring execution logic in AI workflows.
+
+They help orchestrate execution by defining how different Runnable interact (sequentially, in parallel, conditionally etc.)
+
+- `RunnableSequence` -> Runs steps in order (using | operator)
+- `RunnableParallel` -> Runs multiple steps simultaneously
+- `RunnableMap` -> Maps the same input across multiple functions
+- `RunnableBranch` -> Implements conditional execution (if-else logic)
+- `RunnableLambda` -> Wraps custom python function into Runnable
+- `RunnablePassthrough` -> Just forward input as output (act as placeholder)
+
+# Text Splitter
+
+https://chunkviz.up.railway.app/
+
+1. Length Based : `CharacterTextSplitter` divide text/document based on character length
+2. Text Structured Based: Text can be divided based on its structure like paragraph, sentence, word, characters recursively using `RecursiveCharacterTextSplitter`
+3. Document Structured Based: Documents which are not just plain text, such as markdown file, code document can be divided using `RecursiveCharacterTextSplitter`
+4. Semantic Meaning: Sometime text hold tricky meaning in small part and dividing using above two methods can ruin the meaning of original text (if text holds different meaning in smaller text), In this scenario taking semantic meaning and splitting text would be best approach
+
 # Projects
 
 1. Document similarity search
