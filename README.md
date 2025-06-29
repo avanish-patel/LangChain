@@ -126,8 +126,43 @@ https://chunkviz.up.railway.app/
 3. Document Structured Based: Documents which are not just plain text, such as markdown file, code document can be divided using `RecursiveCharacterTextSplitter`
 4. Semantic Meaning: Sometime text hold tricky meaning in small part and dividing using above two methods can ruin the meaning of original text (if text holds different meaning in smaller text), In this scenario taking semantic meaning and splitting text would be best approach
 
-# Projects
+# Vector Store
 
-1. Document similarity search
-> Have N numbers of documents, Have a query sentence and find documents that matches the highest similarity score with the query 
+a vector store is a database optimized for storing and searching high-dimensional vectors, often generated from text or other data using embedding models. It allows for efficient similarity searches, finding documents or data points that are semantically similar to a given query.
+
+Chroma is a lightweight, open source vector database that is specially friendly for local development and small to medium scale production needs.
+DB -> Collection -> Docs
+
+# Retrievers
+
+A retriever is a component in LangChain that fetches relevant documents from a data source in response to a user query.
+
+There are multiple types of retrievers and they are runnables.
+
+Can be divide based on...
+
+- Data sources - Wikipedia, Vector store, Archive retrievers based on data source
+- Retriever search strategy - Maximum Marginal Relevance (MMR), Multi Query, Contextual Compression retrieval etc.
+
+> MMR : MMR is an information retrival algorithm designed to reduce redundancy in the retrieved results while maintaining high relevance to the query.
+> In regular similarity search, we might get documents that are very similar to each other, repeating info and lack diverse perspective
+> MMR avoids that by picking the most relevant info first
+
+> Multi-Query Retrieval: Sometimes single query might not capture all the ways information is phrased in your documents.
+> In this scenario, simple similarity search might miss documents that talk about those things but don't use the main word.
+> 
+> Query: How can I stay healthy?
+> 
+> Could mean:
+> * What should I eat?
+> * How often should I exercise?
+> * How can I manage stress?
+> 
+> How it works:
+> 1. Take your original query
+> 2. Uses an LLM to generate multiple semantically different version of that query
+> 3. Performs retrival for each sub query
+> 4. Combines and deduplicates the results
+
+# Projects
 
