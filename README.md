@@ -117,6 +117,34 @@ They help orchestrate execution by defining how different Runnable interact (seq
 - `RunnableLambda` -> Wraps custom python function into Runnable
 - `RunnablePassthrough` -> Just forward input as output (act as placeholder)
 
+# Loader
+
+Documents loaders are components in LangChain used to load data from various sources into a standardized format (usually as Document Object), which can be used for chunking, embedding, retrival and generation.
+
+* `load()` : 
+  * Eager loading (loads everything at once)
+  * Returns: A list of `Document` objects
+  * Loads all documents immediately into the memory
+  * Best when the number of documents is small and want everything loaded upfront
+  
+* `lazy_load()` :
+  * Lazy loading loads on demand
+  * Returns: A generator of `Document` objects
+  * Documents are not loaded at once, they're fetched one at a time as needed
+  * Best when dealing with large documents or lots of files and you want stream processing without using lots of memory
+
+```shell
+Document(
+  page_content="The actual text content",
+  metadata={"source":"filename.pdf",...}
+)
+```
+
+* `TextLoader` : `TextLoader` is simple and commonly used document loader in LangChain that reads plain text .txt files nad converts them into LangChain Document Objects.
+* `PyPDFLoader`: `PyPDFLoader` is a document loader in LangChain used to load content from PDF files and convert each page into a Document Object.
+* `DirectoryLoader`: `DirectoryLoader` is a document loader that lets you load multiple documents from a directory of files.
+* `WebBaseLoader` : `WebBaseLoader` is a document loader in LangChain used to load and extract content from web pages(URLs). It uses `BeautifulSoup` under the hood to parse HTML and extract visible context.
+
 # Text Splitter
 
 https://chunkviz.up.railway.app/
