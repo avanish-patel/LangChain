@@ -192,5 +192,93 @@ Can be divide based on...
 > 3. Performs retrival for each sub query
 > 4. Combines and deduplicates the results
 
-# Projects
+# RAG
 
+RAG, which stands for Retrieval-Augmented Generation, is an AI framework that combines the strengths of traditional information retrieval systems with the capabilities of large language models (LLMs). It allows LLMs to access and incorporate information from external knowledge sources, like databases or documents, to improve the accuracy, relevance, and up-to-date nature of their responses. 
+Here's a more detailed explanation:
+
+![RAG](./diagrams/RAG.png)
+
+1. The Problem with Traditional LLMs:
+
+LLMs are trained on massive datasets, but their knowledge is essentially frozen at the time of training. 
+
+They can struggle with answering questions about new information or specific, niche topics. 
+
+They can also "hallucinate" or make up information when they lack a definitive answer.
+
+2. How RAG Works:
+
+**Retrieval:**
+
+When presented with a user query, a RAG system first searches for relevant information from an external knowledge base.
+
+**Augmentation:**
+
+This retrieved information is then combined with the original user query to create a more detailed and contextually rich prompt.
+
+**Generation:**
+
+The augmented prompt is then fed to the LLM, which uses it to generate a more accurate, relevant, and informative response.
+
+3. Benefits of RAG:
+
+**Improved Accuracy:**
+
+RAG systems ground the LLM's output in real-world data, reducing the likelihood of incorrect or fabricated information. 
+
+**Increased Relevance:**
+
+By retrieving and incorporating specific information, RAG ensures the LLM's response is highly relevant to the user's query. 
+
+**Access to Fresh Information:**
+
+RAG allows LLMs to access and utilize up-to-date information from external sources, overcoming the limitation of their static training data. 
+Enhanced Transparency:
+
+RAG systems can often cite the sources of their information, providing greater transparency and allowing users to verify the accuracy of the response.
+
+4. Examples of RAG in Action: 
+
+**Customer Support:**
+
+RAG can be used to provide customers with accurate and up-to-date information about their specific orders or accounts. 
+
+**Healthcare:**
+
+RAG can help doctors access the latest research and patient data to make informed decisions. 
+
+**Finance:**
+
+RAG can provide financial analysts with real-time market data and analysis. 
+
+# Tool
+
+A tool is just a Python function (or API) that is packaged in a way the LLM can understand and call when needed.
+
+LLM's like (GPT) are great at: Reasoning & Language Generation
+
+But they can't do things like:
+* Access live data (weather, news)
+* Do reliable math
+* Call API's
+* Run Code
+* Interact with database
+
+Tools are also runnable.
+
+1. Built in Tools : 
+
+Built-in tools are pre-configured and ready to use, providing access to functionalities like web search or code execution.
+
+* DuckDuckGoSearchRun, WikipediaQueryRun, PythonREPLTool, ShellTool, RequestGetTool, SQLDatabaseQueryTool
+
+2. Custom Tools : 
+
+Custom tools, on the other hand, are designed by users to integrate specific functionalities or interact with unique systems
+
+
+
+
+
+Agent = LLM + Tools
