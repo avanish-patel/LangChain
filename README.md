@@ -277,7 +277,13 @@ Built-in tools are pre-configured and ready to use, providing access to function
 
 Custom tools, on the other hand, are designed by users to integrate specific functionalities or interact with unique systems
 
+Ways to create custom tools:
 
+- using `@tool` decorator
+- using `StructuredTool` & `Pydantic`
+- using `BaseTool` class 
+
+>  All tool in LangChain are built on top of `BaseTool`
 
 
 
